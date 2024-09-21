@@ -30,9 +30,9 @@ namespace MangMadu
             Snake snake = new Snake(p, 4, Direction.RIGHT);
             snake.Draw();
 
-            // Create multiple food items
+
             FoodCreator foodCreator = new FoodCreator(Width, Height);
-            List<(Point food, int points)> foods = foodCreator.CreateFoods(3); // Create 3 food items
+            List<(Point food, int points)> foods = foodCreator.CreateFoods(3);
 
             foreach (var (food, points) in foods)
             {

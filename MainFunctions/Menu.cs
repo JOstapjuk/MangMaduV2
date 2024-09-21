@@ -114,7 +114,7 @@ namespace MangMadu
             string name = Console.ReadLine();
             players mängijad = new players();
             // Salvesta skoor, mängija nimi ja taseme nimi faili
-            mängijad.Salvesta_faili(name, score, levelName); // Save the score and level
+            mängijad.Salvesta_faili(name, score, levelName);
             Console.WriteLine("Skoor salvestatud! Vajutage suvalist võtit, et menüüsse naasta...");
             Console.ReadKey();
             sound.PlayMenuSound();
