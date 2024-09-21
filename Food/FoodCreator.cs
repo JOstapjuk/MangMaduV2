@@ -20,16 +20,16 @@ namespace MangMadu
             this.mapWidth = mapWidth;
             this.mapHeight = mapHeight;
 
-            // Initialize different food items with symbols and points
+            // erinevad toit koos sümbolite ja punktidega
             foodItems = new List<NewFood>
             {
-                new NewFood('$', 1),  // Normal food
-                new NewFood('*', 2),  // Special food
-                new NewFood('@', 3)   // Rare food
+                new NewFood('$', 1),  // Normaalne toit
+                new NewFood('*', 2),  // Spetsiaalne toit
+                new NewFood('@', 3)   // Haruldane toit
             };
         }
 
-        public List<(Point, int)> CreateFoods(int count) // Returns a list of tuples (Point, Points)
+        public List<(Point, int)> CreateFoods(int count) 
         {
             var foods = new List<(Point, int)>();
 

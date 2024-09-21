@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 namespace MangMadu
 {
+
+    // klass, mis on mõeldud üksikute toidu esindamiseks
     internal class NewFood
     {
         public char Symbol { get; }

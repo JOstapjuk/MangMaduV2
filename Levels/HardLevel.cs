@@ -6,9 +6,11 @@ using System.Threading.Tasks;
 
 namespace MangMadu
 {
+
+    // kõvatasemeline alamklass
     internal class HardLevel : BaseLevel
     {
-        public override string Name => "Hard";
+        public override string Name => "Kõva";
         public override ConsoleColor Color => ConsoleColor.Red;
         public override int Speed => 50;
         public override int Width => 60;

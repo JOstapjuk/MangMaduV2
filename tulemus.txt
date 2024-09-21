@@ -1,1 +1,9 @@
-﻿
+﻿Jelziaveta: 9 points, Level: Medium
+sda: 15 points, Level: Medium
+: 3 points, Level: Hard
+: 9 points, Level: Easy
+: 8 points, Level: Hard
+: 9 points, Level: Easy
+: 0 points, Level: Hard
+Liza: 12 points, Level: Kõva
+: 33 points, Level: Keskmine

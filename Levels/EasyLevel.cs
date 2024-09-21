@@ -6,9 +6,13 @@ using System.Threading.Tasks;
 
 namespace MangMadu
 {
+
+    //kergetasemeline alamklass
     internal class EasyLevel : BaseLevel
     {
-        public override string Name => "Easy";
+
+        // override - Ületada lihtsate tasemespetsiifiliste väärtustega baasklassi omadused
+        public override string Name => "Lihtne"; 
         public override ConsoleColor Color => ConsoleColor.Green;
         public override int Speed => 200;
         public override int Width => 80;

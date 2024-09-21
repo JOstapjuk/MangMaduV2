@@ -8,15 +8,16 @@ namespace MangMadu
 {
     internal class players
     {
-        private string _failiTee = @"..\..\..\tulemus.txt"; // Path to the file
+        private string _failiTee = @"..\..\..\tulemus.txt"; // Tee faili juurde
 
         public players() { }
 
-        // Adds the player's name, score, and level to the text file
+        // Lisab tekstifaili mängija nime, skoori ja taseme
         public void Salvesta_faili(string nimi, int punktid, string level)
         {
             try
             {
+                // Avage uus StreamWriter, et lisada faili lõppu
                 using (StreamWriter sw = new StreamWriter(_failiTee, true))
                 {
                     sw.WriteLine($"{nimi}: {punktid} points, Level: {level}");
@@ -28,13 +29,15 @@ namespace MangMadu
             }
         }
 
-        // Reads and displays the contents of the text file
+        // Loeb ja kuvab tekstifaili sisu
         public void Naitab_faili()
         {
             try
             {
+                // Failist lugemiseks avage StreamReader
                 using (StreamReader sr = new StreamReader(_failiTee))
                 {
+                    // Loe kogu faili sisu stringiks
                     string lines = sr.ReadToEnd();
                     Console.WriteLine(lines);
                 }

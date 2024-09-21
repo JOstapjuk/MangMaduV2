@@ -6,8 +6,11 @@ using System.Threading.Tasks;
 
 namespace MangMadu
 {
+    //
     internal abstract class BaseLevel
     {
+
+        //abstract - klass on malliks kõikidele alamklassidele
         public abstract string Name { get; }
         public abstract ConsoleColor Color { get; }
         public abstract int Speed { get; }
@@ -18,16 +21,8 @@ namespace MangMadu
         {
             Console.Clear();
             Console.ForegroundColor = Color;
-            Console.WriteLine($"Starting level: {Name}");
-
-            Sound soundManager = new Sound(@"..\..\..\Music"); // Adjust this path as necessary
-            if (Name == "Easy")
-                soundManager.PlayEasyLevel();
-            else if (Name == "Medium")
-                soundManager.PlayMediumLevel();
-            else if (Name == "Hard")
-                soundManager.PlayHardLevelMusic();
-
+            Console.WriteLine($"Lähtetase: {Name}");
+           
             Walls walls = new Walls(Width, Height);
             walls.Draw();
 
@@ -46,28 +41,33 @@ namespace MangMadu
 
             int score = 0;
 
+            DisplayScore(score, Width + 5, 2);
+
             while (true)
             {
                 if (walls.isHit(snake) || snake.isHitTail())
                 {
-                    soundManager.PlayWallTailHitSound();
+                    Sound sound = new Sound();
+                    sound.PlayWallTailHitSound();
 
                     break;
                 }
 
-                // Check if the snake eats any food
                 for (int i = 0; i < foods.Count; i++)
                 {
                     if (snake.Eat(foods[i].food))
                     {
-                        score += foods[i].points; // Add the points from the eaten food
-                        foods.RemoveAt(i); // Remove eaten food from the list
-                        foods.Add(foodCreator.CreateFoods(1)[0]); // Generate a new food item
-                        foods[foods.Count - 1].food.Draw(); // Draw the new food
+                        score += foods[i].points; // Lisa söödud toidust punktid
+                        foods.RemoveAt(i); // Eemalda söödud toit nimekirjast
+                        foods.Add(foodCreator.CreateFoods(1)[0]); // Uue toidukauba loomine
+                        foods[foods.Count - 1].food.Draw(); // Joonista uus toit
 
-                        soundManager.PlayEatFoodSound();
+                        Sound sound = new Sound();
+                        sound.PlayEatFoodSound();
 
-                        break; // Exit the loop after eating food
+                        DisplayScore(score, Width + 5, 2);
+
+                        break; 
                     }
                 }
 
@@ -82,10 +82,21 @@ namespace MangMadu
                 }
             }
 
-            Console.WriteLine($"Game Over! You scored: {score}. Press any key to continue...");
-            Console.ReadKey();
+            Console.SetCursorPosition(0, Height + 2);
+            Console.ForegroundColor = ConsoleColor.White;
+
+            Console.WriteLine($"You scored: {score}.");
+
 
             return score;
+        }
+
+
+        private void DisplayScore(int score, int x, int y)
+        {
+            Console.SetCursorPosition(x, y); // Määra kursori asend väljaspool mänguala
+            Console.ForegroundColor = Color; // Määra hindeteksti värv
+            Console.Write($"Score: {score}  "); 
         }
 
     }

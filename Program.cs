@@ -1,17 +1,20 @@
 ﻿using System;
 using System.Runtime.Serialization;
+using System.Text;
 namespace MangMadu
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Console.Title = "Snake Game";
+            Console.OutputEncoding = Encoding.UTF8;
+
+            Console.Title = "Madu mäng"; // Seadistab konsooliakna pealkirja "Maomäng"
 
             Menu menu = new Menu();
-            menu.Show(); // Call the Show method to display the menu
+            menu.Show(); // Helista menüü kuvamiseks meetodile Näita
 
-            Console.ResetColor();
+            Console.ResetColor(); // Asetab konsooli esiplaani ja taustavärvid nende vaikeväärtustele
         }
     }
 }
