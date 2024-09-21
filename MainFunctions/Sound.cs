@@ -27,6 +27,7 @@ namespace MangMadu
             player.Play();
         }
 
+        // Tegi seda AI abiga
         public void PlayLoop(string filePath)
         {
             // Kontrollige, kas heli ei mängi praegu enne uue taasesituse alustamist
