@@ -1,3 +1,4 @@
-﻿Liza: 12 points, Level: Kõva
-: 33 points, Level: Keskmine
-: 3 points, Level: Kõva
+﻿Jelizaveta: 14 punktid, Tasemel: Kõva
+: 10 punktid, Tasemel: Lihtne
+: 19 punktid, Tasemel: Keskmine
+Test: 11 punktid, Tasemel: Lihtne

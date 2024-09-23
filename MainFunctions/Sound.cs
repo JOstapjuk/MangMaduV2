@@ -35,7 +35,7 @@ namespace MangMadu
             {
                 currentFile = new AudioFileReader(filePath);
                 player.Init(currentFile);
-                player.Volume = 0.3f; // Adjust volume as needed
+                player.Volume = 0.3f;
 
                 player.Play();
                 // Tellige PlaybackStopped üritus, et heli loosida
@@ -56,32 +56,32 @@ namespace MangMadu
         // // PlayLoop meetod menüümuusika failiteega
         public void PlayMenuSound()
         {
-            PlayLoop(@"C:\Users\jeliz\OneDrive\Desktop\JOstapjuk-MangMadu-8f0248e\Music\MenuMusic.mp3");
+            PlayLoop(@"C:\Users\opilane\Source\Repos\MangMaduV2\Music\MenuMusic.mp3");
         }
 
         public void PlayEasyLevel()
         {
-            PlayLoop(@"C:\Users\jeliz\OneDrive\Desktop\JOstapjuk-MangMadu-8f0248e\Music\EasyLevelMusic.mp3");
+            PlayLoop(@"C:\Users\opilane\Source\Repos\MangMaduV2\Music\EasyLevelMusic.mp3");
         }
 
         public void PlayMediumLevel()
         {
-            PlayLoop(@"C:\Users\jeliz\OneDrive\Desktop\JOstapjuk-MangMadu-8f0248e\Music\MediumLevelMusic.mp3");
+            PlayLoop(@"C:\Users\opilane\Source\Repos\MangMaduV2\Music\MediumLevelMusic.mp3");
         }
 
         public void PlayHardLevel()
         {
-            PlayLoop(@"C:\Users\jeliz\OneDrive\Desktop\JOstapjuk-MangMadu-8f0248e\Music\HardLevelMusic.mp3");
+            PlayLoop(@"C:\Users\opilane\Source\Repos\MangMaduV2\Music\HardLevelMusic.mp3");
         }      
 
         public void PlayWallTailHitSound()
         {
-            Play(@"C:\Users\jeliz\OneDrive\Desktop\JOstapjuk-MangMadu-8f0248e\Music\HitWallTailMusic.mp3");
+            Play(@"C:\Users\opilane\Source\Repos\MangMaduV2\Music\HitWallTailMusic.mp3");
         }
 
         public void PlayEatFoodSound()
         {
-            Play(@"C:\Users\jeliz\OneDrive\Desktop\JOstapjuk-MangMadu-8f0248e\Music\EatFoodMusic.mp3");
+            Play(@"C:\Users\opilane\Source\Repos\MangMaduV2\Music\EatFoodMusic.mp3");
         }
 
         public void Stop()

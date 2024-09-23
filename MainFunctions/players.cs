@@ -20,7 +20,7 @@ namespace MangMadu
                 // Avage uus StreamWriter, et lisada faili lõppu
                 using (StreamWriter sw = new StreamWriter(_failiTee, true))
                 {
-                    sw.WriteLine($"{nimi}: {punktid} points, Level: {level}");
+                    sw.WriteLine($"{nimi}: {punktid} punktid, Tasemel: {level}");
                 }
             }
             catch (Exception ex)
